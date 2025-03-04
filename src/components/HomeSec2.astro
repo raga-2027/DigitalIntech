@@ -1,0 +1,39 @@
+---
+
+const casosExito = [
+  {
+    empresa: "EccosBeauty",
+    problema: "Pagina en codigo cerrado, con problemas de rendimiento.",
+    solucion: "Migracion y rediseño de UI con tecnologias MERN.",
+    resultado: "Un mejor interaccion del usurio y mejor rendimiento.",
+  },
+  {
+    empresa: "Valusa",
+    problema: "Falta de presencia digital y dificultades en la captación de clientes.",
+    solucion: "Desarrollo de una web optimizada y estrategias de automatización.",
+    resultado: "Incremento del 50% en conversiones y mayor alcance del negocio.",
+  },
+];
+
+
+---
+
+<section class="bg-gray-100 py-16 px-6 w-full h-screen">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-4xl font-bold text-blue-600">Casos de Éxito</h2>
+    <p class="text-gray-600 mt-4">
+      Descubre cómo hemos ayudado a empresas a optimizar sus procesos y crecer.
+    </p>
+  </div>
+
+  <div class="mt-12 grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+    {casosExito.map(({ empresa, problema, solucion, resultado }) => (
+      <div class="bg-white shadow-lg rounded-xl p-6">
+        <h3 class="text-2xl font-semibold text-blue-700">{empresa}</h3>
+        <p class="mt-2"><span class="font-semibold">Problema:</span> {problema}</p>
+        <p class="mt-2"><span class="font-semibold">Solución:</span> {solucion}</p>
+        <p class="mt-2 text-green-600 font-semibold">🚀 {resultado}</p>
+      </div>
+    ))}
+  </div>
+</section>

@@ -1,3 +1,46 @@
-<footer class="w-full h-[150px] flex items-center justify-center bg-primary">
+---
+const year = new Date().getFullYear();
+---
 
+<footer class="bg-gray-900 text-white py-8">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-6">
+    
+    <!-- Logo y descripción -->
+    <div>
+      <h2 class="text-2xl font-bold text-blue-400">Digital-Intech</h2>
+      <p class="text-gray-400 mt-2">
+        Transformamos tu negocio con tecnología de vanguardia y automatización inteligente.
+      </p>
+    </div>
+
+    <!-- Enlaces de navegación -->
+    <div>
+      <h3 class="text-lg font-semibold text-white">Enlaces</h3>
+      <ul class="mt-2 space-y-2">
+        <li><a href="/" class="text-gray-400 hover:text-blue-400">Inicio</a></li>
+        <li><a href="/#servicios" class="text-gray-400 hover:text-blue-400">Servicios</a></li>
+        <li><a href="/#casos-de-exito" class="text-gray-400 hover:text-blue-400">Casos de Éxito</a></li>
+        <li><a href="/#contacto" class="text-gray-400 hover:text-blue-400">Contacto</a></li>
+      </ul>
+    </div>
+
+    <!-- Redes sociales -->
+    <div>
+      <h3 class="text-lg font-semibold text-white">Síguenos</h3>
+      <div class="mt-2 flex space-x-4">
+        <a href="#" class="text-gray-400 hover:text-blue-400">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.096 0 2.238.195 2.238.195v2.463h-1.26c-1.244 0-1.632.776-1.632 1.568V12h2.773l-.443 2.891h-2.33v6.987C18.343 21.128 22 16.991 22 12z"/></svg>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-blue-400">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19.633 7.997c.013.162.013.324.013.486 0 4.975-3.785 10.705-10.705 10.705-2.13 0-4.117-.626-5.79-1.703.297.036.583.049.892.049 1.774 0 3.404-.604 4.71-1.62-1.66-.036-3.06-1.127-3.545-2.637.23.036.457.061.698.061.33 0 .66-.049.968-.13-1.725-.36-3.02-1.874-3.02-3.728v-.049c.505.28 1.09.453 1.705.471a3.757 3.757 0 0 1-1.68-3.122c0-.691.179-1.327.505-1.874 1.835 2.248 4.584 3.725 7.683 3.882-.061-.28-.097-.572-.097-.874 0-2.116 1.716-3.832 3.832-3.832 1.102 0 2.115.466 2.822 1.217a7.589 7.589 0 0 0 2.437-.927 3.836 3.836 0 0 1-1.684 2.116 7.435 7.435 0 0 0 2.176-.591 7.793 7.793 0 0 1-1.924 1.994z"/></svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Línea divisoria -->
+  <div class="border-t border-gray-700 mt-6 pt-4 text-center">
+    <p class="text-gray-400">© {year} Digital-Intech. Todos los derechos reservados.</p>
+  </div>
 </footer>

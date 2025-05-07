@@ -1,31 +1,49 @@
 ---
-const formAction = "https://formsubmit.co/digitalintechx@gmail.com"; // Reemplaza con tu correo
+const formAction = "https://formsubmit.co/32e34c9d79e4b9a2b87deeb4e63e1680";
 ---
-
 <section class="py-16 bg-gray-100" id="contacto">
   <div class="container mx-auto px-6 max-w-lg">
     <h2 class="text-3xl font-bold text-center text-gray-900">Contáctanos</h2>
     <p class="text-center text-gray-600 mt-2">Déjanos tu información y nos pondremos en contacto contigo.</p>
 
-    <form action={'32e34c9d79e4b9a2b87deeb4e63e1680'} method="POST" class="mt-8 bg-white p-6 rounded-lg shadow-lg">
+    <form action={formAction} method="POST" class="mt-8 bg-white p-6 rounded-lg shadow-lg">
+      <!-- FormSubmit extras -->
       <input type="hidden" name="_captcha" value="false" />
-      
+      <input type="hidden" name="_next" value="http://localhost:4321/gracias" />
+
       <div class="mb-4">
         <label class="block text-gray-700 font-semibold">Nombre</label>
-        <input type="text" name="name" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
+        <input
+          type="text"
+          name="name"
+          required
+          class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
+        />
       </div>
 
       <div class="mb-4">
         <label class="block text-gray-700 font-semibold">Correo Electrónico</label>
-        <input type="email" name="email" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
+        <input
+          type="email"
+          name="email"
+          required
+          class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
+        />
       </div>
 
       <div class="mb-4">
         <label class="block text-gray-700 font-semibold">Mensaje</label>
-        <textarea name="message" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"></textarea>
+        <textarea
+          name="message"
+          required
+          class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
+        ></textarea>
       </div>
 
-      <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700">
+      <button
+        type="submit"
+        class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700"
+      >
         Enviar Mensaje
       </button>
     </form>

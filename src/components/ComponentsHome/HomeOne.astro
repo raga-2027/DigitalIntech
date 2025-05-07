@@ -1,21 +1,27 @@
-<section class="flex justify-center flex-col w-full h-screen bg-gray-100">
+<section class="flex justify-between flex-col h-full sm:h-screen w-full bg-gray-100">
     <div
-        class="flex flex-col items-center justify-around sm:justify-around h-[60%] w-full md:flex-row xl:flex-row"
+        class="flex flex-col items-center justify-around h-auto w-full md:flex-row xl:flex-row sm:h-[60%] px-200 py-8"
     >
+        <!-- Texto -->
         <div
-            class="flex flex-col sm:h-[70%] h-[60%] sm:w-[40%] w-[70%] sm:justify-center justify-between"
+            class="flex flex-col h-auto w-full sm:w-[50%] sm:h-[70%] justify-between items-center sm:items-start mb-8 sm:mb-0"
         >
             <div
-                class="flex h-[30%] items-center justify-center font-miFuente sm:text-7xl text-4xl w-full sm:h-[30%]"
+                class="flex items-center justify-center sm:justify-start font-miFuente text-4xl sm:text-7xl w-full mb-4"
             >
-                <h1 class="felx justify-center items-center w-full">
+                <h1
+                    class="flex justify-center sm:justify-start items-center w-full"
+                >
                     Digital-Intech
                 </h1>
             </div>
+
             <div
-                class="flex justify-center text-sm items-center h-[50%] w-full sm:h-[50%] font-robo"
+                class="flex justify-center sm:justify-start text-sm sm:text-lg items-center w-full font-robo mb-6"
             >
-                <p class="flex  text-center   font-robo">
+                <p
+                    class="flex text-center text-lg sm:text-left leading-relaxed"
+                >
                     En Digital-Intech nos especializamos en el desarrollo web y
                     la automatización de procesos administrativos, ayudando a
                     empresas a optimizar sus operaciones, mejorar su eficiencia
@@ -25,28 +31,37 @@
                     la calidad, la innovación y la excelencia en cada proyecto.
                 </p>
             </div>
+
+            <!-- Botones (visibles en todas resoluciones) -->
             <div
-                class="hidden sm:flex flex-row items-center w-full h-[20%] sm:h-[30%] justify-around font-robo flex-none"
+                class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center sm:justify-start"
             >
-                <button
-                    class="bg-primary text-white items-center py-3 px-9 hover:bg-secundary rounded-md"
-                    ><a href="/services#contacto">Contactanos</a></button
+                <a
+                    href="/services#contacto"
+                    class="bg-primary text-white py-3 px-6 rounded-md hover:bg-secundary text-center w-full sm:w-auto"
                 >
-                <button
-                    class="bg-primary text-white items-center py-3 px-9 hover:bg-secundary rounded-md"
-                    ><a href="/services#porta">Nuestro Portafolio</a></button
+                    Contáctanos
+                </a>
+                <a
+                    href="/services#porta"
+                    class="bg-primary text-white py-3 px-6 rounded-md hover:bg-secundary text-center w-full sm:w-auto"
                 >
+                    Nuestro Portafolio
+                </a>
             </div>
         </div>
+
+        <!-- SVG Logo -->
         <div
-            class="flex w-[40%] h-[30%] justify-start sm:justify-center items-centere sm:w-[30%] sm:h-[60%]"
+            class="flex justify-center items-center w-full sm:w-[40%] sm:h-[60%]"
         >
             <svg
-                width="300"
-                height="240"
+                width="200"
+                height="160"
                 viewBox="0 0 100 80"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                class="w-[200px] h-[160px] sm:w-[300px] sm:h-[240px]"
             >
                 <path
                     d="M0 80H47.3343V71.1538H28.4418V8.79121H47.3476L47.3343 0H0V8.79121H18.2649V71.1538H0V80Z"

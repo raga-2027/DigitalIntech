@@ -2,5 +2,8 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
-  integrations: [tailwind()],
+  site: 'https://raga-2027.github.io/DigitallIntech',
+  base: '/DigitallIntech/',
+
+  integrations: [tailwind()]
 });

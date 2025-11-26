@@ -1,7 +1,8 @@
 name: Deploy Astro to GitHub Pages
+
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 permissions:
   contents: read
@@ -21,7 +22,7 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci   # más seguro que npm install
 
       - name: Build Astro
         run: npm run build
@@ -30,16 +31,21 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
-          path: dist
+          path: ./dist    # si tu carpeta fuera "build", cámbialo aquí
+          if-no-files-found: error
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v4   # 👈 Faltaba este paso
+
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4

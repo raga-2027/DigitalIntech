@@ -22,17 +22,15 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm ci   # más seguro que npm install
+        run: npm ci
 
-      - name: Build Astro
+      - name: Build
         run: npm run build
 
-      - name: Upload dist folder
-        uses: actions/upload-artifact@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages
-          path: ./dist    # si tu carpeta fuera "build", cámbialo aquí
-          if-no-files-found: error
+          path: ./dist        # 👈 SOLO se sube dist, NO TODO EL REPO
 
   deploy:
     needs: build
@@ -43,9 +41,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Configurar GitHub Pages
-        uses: actions/configure-pages@v4   # 👈 Faltaba este paso
+      - name: Configure Pages
+        uses: actions/configure-pages@v4
 
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
